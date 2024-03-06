@@ -1,0 +1,48 @@
+<section id="contact">
+    <div class="contactsContainer">
+        <h1>
+            Contacts
+        </h1>
+        <h2>
+            Got a problem to solve?
+        </h2>
+        <p>
+            Contact me through this form. I am interested in hearing from you, knowing your ideas and contributing to
+            your projects with my work.
+        </p>
+        <p>
+            Need a Frontend developer? Contact me!
+        </p>
+    </div>
+    <div class="contactsFormContainer">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <div class="form-group">
+                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your Name" required [ngClass]="{'valid-field': name.valid && name.touched, 'invalid-field': name.invalid && name.touched}">
+                <span *ngIf="name.invalid && name.touched">Please enter a name</span>
+            </div>
+            <div class="form-group">
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your E-Mail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [ngClass]="{'valid-field': email.valid && email.touched, 'invalid-field': email.invalid && email.touched}">
+                <span *ngIf="email.invalid && email.touched">Please enter a valid Email</span>
+            </div>
+            <div class="form-group">
+                <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message" required [ngClass]="{'valid-field': message.valid && message.touched, 'invalid-field': message.invalid && message.touched}"></textarea>
+                <span *ngIf="message.invalid && message.touched">Please enter a message</span>
+            </div>
+                <div class="checkButtonContainer">
+                <input type="checkbox" name="checkbox" [(ngModel)]="contactData.agreeToPrivacy" #privacy="ngModel" required>
+                <p>
+                    I've read the <a href="#">Privacy policy</a> and agree to the processing of my data as outlined.
+                </p>
+            </div>
+            <div class="submitBtnContainer">
+                <button type="submit" [ngClass]="{ 'button-enabled': contactForm.valid && contactData.agreeToPrivacy, 'button-disabled': !contactForm.valid || !contactData.agreeToPrivacy }">Send message :)</button>
+            </div>
+        </form>
+    </div>
+</section>
+<div class="bgBottomLeft">   
+    <img src="assets/img/backgrounds/bgBottomLeft.png">
+</div>
+<div class="underLine">
+
+</div>

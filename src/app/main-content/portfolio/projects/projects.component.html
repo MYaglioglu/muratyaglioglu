@@ -1,0 +1,22 @@
+<div class="portfolioContainer">
+    <div class="portfolioItem" [ngStyle]="{'flex-direction': isReverse ? 'row-reverse' : 'row'}">
+        <div class="portfolioItemText">
+            <h2>{{title}}</h2>
+            <h3>{{language}}</h3>
+            <p>
+                {{description}}
+            </p>
+            <div class="portfolioButtonRow">
+                <button class="buttonLeft">
+                    <a href="{{liveTest}}">Live test</a>
+                </button>
+                <button class="buttonRight">
+                    <a href="{{gitHub}}">Github</a>
+                </button>
+            </div>
+        </div>
+        <div class="portfolioItemImg">
+            <img src="{{imagePath}}">
+        </div>
+    </div>
+</div>

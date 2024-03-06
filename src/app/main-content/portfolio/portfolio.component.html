@@ -1,0 +1,25 @@
+<section>
+    <div class="title">
+        <div class="titleLeftLine"></div>
+        <h1>Portfolio</h1>
+        <div class="titleRightLine"></div>
+    </div>
+    <div class="titleText">
+        <span>
+            Explore a selection of my work here - Interact with projects to see my skills in action.
+        </span>
+    </div>
+    <app-projects  *ngFor="let projects of myPortfolio; let i=index" 
+    [i]="i" [imagePath]="projects.imagePath" [title]="projects.title" 
+    [language]="projects.language" [description]="projects.description" 
+    [liveTest]="projects.liveTest" [gitHub]="projects.gitHub"
+    >
+    </app-projects>
+
+</section>
+<div class="backGroundBlur">
+    <img src="assets/img/backgrounds/blurPortfolioOne.png">
+</div>
+<div class="backGroundBlurTwo">
+    <img src="assets/img/backgrounds/blurPortfolioTwo.png">
+</div>

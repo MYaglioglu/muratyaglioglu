@@ -1,0 +1,110 @@
+section {
+    display: flex;
+
+    @media (max-width: 800px) {
+        display: block;
+    }
+}
+
+.skillIconContainer{
+    z-index: 4;
+    width: 50%;
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (max-width: 700px) {
+        top: 700px;
+    }
+
+    .skillIcon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        img {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+        p {
+            text-align: center;
+        }
+        
+    }
+}
+
+.skillTextContainer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 50px;
+
+    
+    h1 {
+        font-size: 90px;
+        font-weight: 700;
+    }
+    .skillText{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+
+.skillTextLine{
+    position: absolute;
+    border: 2px solid #00BEE8;
+    width: 150px;
+    height: 0;
+    right: 0;
+
+    @media (max-width: 1400px) {
+        width: 100px;
+    }
+
+    @media (max-width: 1200px) {
+        width: 50px;
+    }
+
+    @media (max-width: 800px) {
+        width: 150px;
+    }
+}
+
+.touchBtn{
+    margin-top: 50px;
+    padding: 15px 30px 15px 30px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: #00BEE8;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: #4B47FF;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+    }
+}
+
+.backGroundBlur{
+    position: absolute;
+    top: 1880px;
+    z-index: 3;
+}
